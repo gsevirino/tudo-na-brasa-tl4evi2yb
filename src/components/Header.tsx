@@ -52,12 +52,15 @@ export function Header({ onOpenOrderModal }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-carvao-900/95 backdrop-blur-md border-b border-white/10 shadow-xl py-3'
-          : 'bg-gradient-to-b from-carvao-950/90 to-transparent py-4 sm:py-5'
+          ? 'bg-carvao-950/95 backdrop-blur-md border-b-2 border-brasa-500/40 shadow-xl py-3'
+          : 'bg-gradient-to-b from-carvao-950 via-carvao-950/90 to-transparent py-4 sm:py-5'
       }`}
     >
+      {/* Linha decorativa de topo inspirada no anel do selo */}
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-bege-300/50 to-transparent" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
-        {/* Logo */}
+        {/* Logo oficial circular */}
         <a href="#inicio" onClick={(e) => handleNavLinkClick(e, '#inicio')} className="group">
           <FlameLogo size="md" />
         </a>
@@ -69,23 +72,26 @@ export function Header({ onOpenOrderModal }: HeaderProps) {
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavLinkClick(e, link.href)}
-              className="px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+              className="px-3 py-2 rounded-lg text-sm font-medium text-gray-200 hover:text-bege-200 hover:bg-white/5 transition-all relative group/nav"
             >
-              {link.label}
+              <span>{link.label}</span>
+              <span className="absolute bottom-1 left-3 right-3 h-0.5 bg-brasa-500 scale-x-0 group-hover/nav:scale-x-100 transition-transform origin-center" />
             </a>
           ))}
         </nav>
 
-        {/* Right CTA & Location Badge */}
+        {/* Right CTA & Mini-Selo "Belo Horizonte • MG" */}
         <div className="hidden sm:flex items-center gap-3">
-          <div className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-300">
-            <MapPin className="w-3.5 h-3.5 text-brasa-500" />
-            <span>Belo Horizonte • MG</span>
+          {/* Mini-selo circular retrô com anel duplo */}
+          <div className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-carvao-900 border border-bege-300/30 text-xs font-medium text-bege-200 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-brasa-500 ring-2 ring-white/60 animate-pulse" />
+            <MapPin className="w-3.5 h-3.5 text-brasa-400" />
+            <span className="font-semibold tracking-wide">Belo Horizonte • MG</span>
           </div>
 
           <Button
             onClick={onOpenOrderModal}
-            className="bg-brasa-500 hover:bg-brasa-600 text-white font-semibold px-4 sm:px-5 py-2 text-sm rounded-lg glow-brasa transition-all transform hover:scale-105 active:scale-95 gap-2"
+            className="bg-brasa-500 hover:bg-brasa-600 text-white font-bold px-4 sm:px-5 py-2 text-sm rounded-xl glow-brasa border border-bege-300/30 transition-all transform hover:scale-105 active:scale-95 gap-2 shadow-lg"
           >
             <Flame className="w-4 h-4 fill-white" />
             <span>Pedir Agora</span>
@@ -98,7 +104,7 @@ export function Header({ onOpenOrderModal }: HeaderProps) {
           <Button
             size="sm"
             onClick={onOpenOrderModal}
-            className="bg-brasa-500 hover:bg-brasa-600 text-white text-xs px-3 py-1.5 font-semibold glow-brasa"
+            className="bg-brasa-500 hover:bg-brasa-600 text-white text-xs px-3.5 py-1.5 font-bold glow-brasa rounded-lg border border-bege-300/30"
           >
             Pedir
           </Button>
@@ -115,12 +121,13 @@ export function Header({ onOpenOrderModal }: HeaderProps) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[60px] bg-carvao-900/98 backdrop-blur-xl border-b border-white/10 shadow-2xl p-6 animate-in slide-in-from-top-4 duration-300">
+        <div className="md:hidden fixed inset-x-0 top-[64px] bg-carvao-950/98 backdrop-blur-xl border-b-2 border-brasa-500/40 shadow-2xl p-6 animate-in slide-in-from-top-4 duration-300">
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-1">
               <FlameLogo size="sm" />
-              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-[11px] text-amber-300 font-medium">
-                <MapPin className="w-3 h-3 text-brasa-500" />
+              {/* Mini-selo mobile */}
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-carvao-900 border border-bege-300/30 text-[11px] text-bege-200 font-medium">
+                <MapPin className="w-3 h-3 text-brasa-400" />
                 <span>Castelo, BH</span>
               </div>
             </div>
@@ -129,7 +136,7 @@ export function Header({ onOpenOrderModal }: HeaderProps) {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavLinkClick(e, link.href)}
-                className="px-4 py-3 rounded-lg text-base font-medium text-gray-200 hover:text-white hover:bg-white/10 transition-colors"
+                className="px-4 py-3 rounded-lg text-base font-medium text-gray-200 hover:text-bege-200 hover:bg-white/10 transition-colors"
               >
                 {link.label}
               </a>
@@ -141,7 +148,7 @@ export function Header({ onOpenOrderModal }: HeaderProps) {
                   setMobileMenuOpen(false)
                   onOpenOrderModal()
                 }}
-                className="w-full bg-brasa-500 hover:bg-brasa-600 text-white font-semibold py-3 rounded-lg glow-brasa flex items-center justify-center gap-2"
+                className="w-full bg-brasa-500 hover:bg-brasa-600 text-white font-bold py-3 rounded-xl glow-brasa border border-bege-300/30 flex items-center justify-center gap-2 shadow-lg"
               >
                 <Flame className="w-4 h-4 fill-white" />
                 <span>Pedir no Menu Oficial</span>
@@ -151,7 +158,7 @@ export function Header({ onOpenOrderModal }: HeaderProps) {
                 href={RESTAURANT_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-2.5 text-center text-xs text-emerald-400 hover:text-emerald-300 font-medium"
+                className="w-full py-2.5 text-center text-xs text-bege-200 hover:text-white font-medium"
               >
                 Ou ligue para {RESTAURANT_INFO.phone}
               </a>

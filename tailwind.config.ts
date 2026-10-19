@@ -29,19 +29,36 @@ export default {
       fontFamily: {
         sans: ['Poppins', 'Inter var', 'system-ui', 'sans-serif'],
         display: ['Poppins', 'Inter var', 'system-ui', 'sans-serif'],
+        script: ['Pacifico', 'cursive', 'sans-serif'],
       },
       colors: {
+        // Paleta oficial extraída do selo Tudo na Brasa
         brasa: {
-          50: '#fff4f2',
-          100: '#ffe6e2',
-          200: '#ffd1ca',
-          300: '#ffb0a3',
-          400: '#f87d69',
-          500: '#e74c3c', // Brasa Principal
-          600: '#c0392b', // Brasa Escura
-          700: '#a3261a',
-          800: '#862218',
-          900: '#6f2119',
+          50: '#fff5f3',
+          100: '#ffe9e5',
+          200: '#ffd4cc',
+          300: '#ffb3a4',
+          400: '#f66750',
+          500: '#e8402a', // Vermelho vibrante do selo oficial
+          600: '#cb2b17', // Vermelho escuro/sombra
+          700: '#ab2111',
+          800: '#8c1f12',
+          900: '#741e14',
+          950: '#410b06',
+        },
+        // Bege e dourado da faixa / ribbon "Carnes e Pizzas"
+        bege: {
+          50: '#faf6ee',
+          100: '#f5edd9',
+          200: '#ecdcba',
+          300: '#dfc091', // Bege central do banner
+          400: '#d2aa70',
+          500: '#c59b63', // Tom de dobra do ribbon
+          600: '#a87948',
+          700: '#865b38',
+          800: '#6d4a31',
+          900: '#472f1f',
+          950: '#2b1810', // Marrom do texto na faixa
         },
         carvao: {
           800: '#1a1a1a',
@@ -49,10 +66,10 @@ export default {
           950: '#070707',
         },
         fumaca: {
-          50: '#faf8f6',
-          100: '#f5f2ef',
-          200: '#eae4de',
-          300: '#d5ccc2',
+          50: '#faf7f2',
+          100: '#f6f1e8',
+          200: '#ede4d4',
+          300: '#dfd2bc',
         },
         amber: {
           glow: '#ffb300',

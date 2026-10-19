@@ -22,44 +22,53 @@ export function FlameLogo({ size = 'md', className = '', showText = true }: Flam
 
   const titleClass =
     size === 'sm'
-      ? 'text-base sm:text-lg font-bold'
+      ? 'text-base sm:text-lg'
       : size === 'lg'
-        ? 'text-2xl sm:text-3xl font-extrabold tracking-tight'
-        : 'text-lg sm:text-xl font-extrabold tracking-tight'
+        ? 'text-2xl sm:text-3xl'
+        : 'text-lg sm:text-xl'
 
-  const subtitleClass =
-    size === 'sm'
-      ? 'text-[9px] tracking-wider'
-      : size === 'lg'
-        ? 'text-xs tracking-widest'
-        : 'text-[10px] sm:text-xs tracking-wider'
+  const subtitleClass = size === 'sm' ? 'text-[9px]' : size === 'lg' ? 'text-[11px]' : 'text-[10px]'
 
   return (
-    <div className={`flex items-center gap-2.5 sm:gap-3 select-none ${className}`}>
-      {/* Selo circular oficial do cliente com glow sutil e alto contraste */}
-      <div className="relative shrink-0 flex items-center justify-center rounded-full p-0.5 transition-transform duration-200 group-hover:scale-105">
-        {/* Glow atmosférico suave da brasa */}
-        <div className="absolute inset-0 rounded-full bg-brasa-500/20 blur-sm -z-10 pointer-events-none" />
+    <div className={`flex items-center gap-2.5 sm:gap-3.5 select-none ${className}`}>
+      {/* Selo circular oficial com anel duplo e glow retrô */}
+      <div className="relative shrink-0 flex items-center justify-center rounded-full p-1 transition-transform duration-300 group-hover:scale-105">
+        {/* Glow atmosférico do selo */}
+        <div className="absolute inset-0 rounded-full bg-brasa-500/30 blur-md -z-10 pointer-events-none" />
+        {/* Anel externo decorativo estilo selo */}
+        <div className="absolute inset-0 rounded-full border border-bege-300/40 pointer-events-none" />
 
         <img
           src={officialLogoImg}
           alt="Logo Oficial Restaurante Tudo na Brasa - Carnes e Pizzas"
-          className={`${logoDimensions} object-contain rounded-full drop-shadow-[0_4px_12px_rgba(232,64,42,0.35)]`}
+          className={`${logoDimensions} object-contain rounded-full shadow-lg shadow-black/60`}
           loading="eager"
         />
       </div>
 
       {showText && (
         <div className="flex flex-col justify-center">
-          <span className={`${titleClass} font-display text-white leading-tight`}>
-            Tudo na{' '}
-            <span className="text-brasa-400 underline decoration-amber-500/60 decoration-wavy decoration-1 underline-offset-4">
+          <div className="flex items-baseline gap-1.5 leading-none">
+            <span className={`${titleClass} font-bold text-white tracking-tight`}>Tudo na</span>
+            <span
+              className={`${titleClass} font-script text-brasa-400 drop-shadow-[0_2px_8px_rgba(232,64,42,0.4)]`}
+            >
               Brasa
             </span>
-          </span>
-          <span className={`${subtitleClass} uppercase text-amber-300/90 font-medium -mt-0.5`}>
-            Carnes & Pizzas na Brasa
-          </span>
+          </div>
+
+          {/* Faixa estilisada bege com o texto oficial "Carnes e Pizzas" */}
+          <div className="mt-1 inline-flex items-center gap-1.5 self-start">
+            <span className="h-px w-2 bg-bege-400/60 hidden sm:inline-block" />
+            <span
+              className={`${subtitleClass} font-script text-bege-300 tracking-wide font-normal`}
+            >
+              Carnes e Pizzas
+            </span>
+            <span className="text-[9px] uppercase tracking-wider text-bege-400/80 font-sans font-semibold">
+              • Desde 2003
+            </span>
+          </div>
         </div>
       )}
     </div>
