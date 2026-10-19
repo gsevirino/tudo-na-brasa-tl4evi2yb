@@ -117,11 +117,13 @@ export function Header({ onOpenOrderModal }: HeaderProps) {
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-x-0 top-[60px] bg-carvao-900/98 backdrop-blur-xl border-b border-white/10 shadow-2xl p-6 animate-in slide-in-from-top-4 duration-300">
           <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-xs text-amber-400 font-medium w-fit mb-2">
-              <MapPin className="w-3.5 h-3.5 text-brasa-500" />
-              <span>Castelo, Belo Horizonte • MG</span>
+            <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-1">
+              <FlameLogo size="sm" />
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-[11px] text-amber-300 font-medium">
+                <MapPin className="w-3 h-3 text-brasa-500" />
+                <span>Castelo, BH</span>
+              </div>
             </div>
-
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}

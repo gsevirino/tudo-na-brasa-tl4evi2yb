@@ -32,7 +32,9 @@ export default function Index() {
     '@id': 'https://www.tudonabrasa.com.br/#restaurant',
     name: 'Tudo na Brasa',
     legalName: RESTAURANT_INFO.legalName,
+    logo: 'https://www.tudonabrasa.com.br/logo-tudo-na-brasa.svg',
     image: [
+      'https://www.tudonabrasa.com.br/logo-tudo-na-brasa.svg',
       'https://img.usecurling.com/p/1200/630?q=brazilian+barbecue+picanha&color=red',
       'https://img.usecurling.com/p/800/600?q=gourmet+bacon+cheeseburger&color=red',
     ],

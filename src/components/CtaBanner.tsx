@@ -1,5 +1,6 @@
-import { Flame, ExternalLink, ArrowRight } from 'lucide-react'
+import { ExternalLink, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import officialLogoImg from '@/assets/image-524a6.png'
 
 interface CtaBannerProps {
   onOpenOrderModal: () => void
@@ -17,8 +18,12 @@ export function CtaBanner({ onOpenOrderModal }: CtaBannerProps) {
       <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-black/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
-        <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white mb-6 shadow-xl animate-flame">
-          <Flame className="w-9 h-9 fill-white" />
+        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-black/20 backdrop-blur-md border border-white/30 p-1 flex items-center justify-center mb-6 shadow-2xl transition-transform hover:scale-105">
+          <img
+            src={officialLogoImg}
+            alt="Logo oficial Tudo na Brasa"
+            className="w-full h-full object-contain rounded-full drop-shadow-md"
+          />
         </div>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">

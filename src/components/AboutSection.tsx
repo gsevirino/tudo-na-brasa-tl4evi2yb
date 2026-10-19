@@ -1,5 +1,6 @@
-import { Flame, Beef, HeartHandshake, Sparkles, MapPin, Award } from 'lucide-react'
+import { Flame, Beef, HeartHandshake, Sparkles, MapPin } from 'lucide-react'
 import { RESTAURANT_INFO } from '@/data/restaurantData'
+import officialLogoImg from '@/assets/image-524a6.png'
 
 export function AboutSection() {
   return (
@@ -22,12 +23,15 @@ export function AboutSection() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-carvao-950 via-carvao-950/20 to-transparent" />
-
               {/* Floating Stat Card */}
               <div className="absolute bottom-6 left-6 right-6 p-4 sm:p-5 rounded-2xl bg-carvao-900/90 backdrop-blur-md border border-white/10 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-brasa-500/20 border border-brasa-500/40 flex items-center justify-center text-brasa-400">
-                    <Award className="w-6 h-6 animate-flame" />
+                  <div className="w-14 h-14 rounded-full bg-brasa-500/20 border border-brasa-500/40 p-1 flex items-center justify-center shrink-0 shadow-lg">
+                    <img
+                      src={officialLogoImg}
+                      alt="Selo oficial Tudo na Brasa"
+                      className="w-full h-full object-contain rounded-full"
+                    />
                   </div>
                   <div>
                     <h4 className="text-white font-bold text-sm sm:text-base">
@@ -38,13 +42,13 @@ export function AboutSection() {
                 </div>
                 <div className="text-right">
                   <span className="text-amber-400 font-extrabold text-lg sm:text-xl block">
-                    100%
+                    Desde 2003
                   </span>
                   <span className="text-[11px] text-gray-400 uppercase tracking-wider">
-                    Artesanal
+                    Autêntico
                   </span>
                 </div>
-              </div>
+              </div>{' '}
             </div>
 
             {/* Decorative element */}

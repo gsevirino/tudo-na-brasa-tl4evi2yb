@@ -7,8 +7,9 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
-import { ExternalLink, Flame } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import { RESTAURANT_INFO, type MenuItem } from '@/data/restaurantData'
+import officialLogoImg from '@/assets/image-524a6.png'
 
 interface OrderModalProps {
   isOpen: boolean
@@ -26,8 +27,12 @@ export function OrderModal({ isOpen, onClose, item }: OrderModalProps) {
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="sm:max-w-md bg-carvao-900 border border-white/10 text-white shadow-2xl animate-in zoom-in-95 duration-200">
         <DialogHeader className="space-y-3">
-          <div className="mx-auto w-12 h-12 rounded-full bg-brasa-500/20 border border-brasa-500/40 flex items-center justify-center text-brasa-400">
-            <Flame className="w-6 h-6 animate-flame" />
+          <div className="mx-auto w-16 h-16 rounded-full bg-brasa-500/20 border border-brasa-500/40 p-1 flex items-center justify-center shadow-lg">
+            <img
+              src={officialLogoImg}
+              alt="Logo Oficial Tudo na Brasa"
+              className="w-full h-full object-contain rounded-full"
+            />
           </div>
           <DialogTitle className="text-xl sm:text-2xl font-bold text-center text-white">
             Redirecionando para o Menu Oficial

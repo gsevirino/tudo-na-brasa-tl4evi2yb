@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <!-- Filtro sutil de sombra se desejado -->
+    <filter id="brasa-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="ribbon-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Círculo principal vermelho vibrante da marca -->
+  <circle cx="150" cy="150" r="142" fill="#E8402A" filter="url(#brasa-shadow)"/>
+
+  <!-- Borda interna branca circular estilizada -->
+  <circle cx="150" cy="150" r="130" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round"/>
+
+  <!-- Anel interno fino concêntrico -->
+  <circle cx="150" cy="150" r="121" fill="none" stroke="#FFFFFF" stroke-width="1.8" opacity="0.65"/>
+
+  <!-- Texto Superior Arqueado: "Desde 2003" / "Desde 2005" -->
+  <!-- Usando caminho arqueado para ajuste perfeito -->
+  <path id="archTop" d="M 52,146 A 108,108 0 0,1 248,146" fill="none" />
+  <text fill="#FFFFFF" font-family="'Brush Script MT', 'Great Vibes', 'Caveat', 'Playball', 'Lucida Handwriting', 'Dancing Script', cursive, sans-serif" font-size="25" font-weight="bold" letter-spacing="1.5">
+    <textPath href="#archTop" startOffset="50%" text-anchor="middle">
+      Desde 2003
+    </textPath>
+  </text>
+
+  <!-- Elemento central: "Tudo na" -->
+  <g id="texto-tudo-na">
+    <text x="150" y="128" text-anchor="middle" fill="#FFFFFF" font-family="'Brush Script MT', 'Great Vibes', 'Caveat', 'Playball', 'Lucida Handwriting', 'Dancing Script', cursive, sans-serif" font-size="46" font-weight="bold" font-style="italic" transform="rotate(-7 150 128)">
+      Tudo na
+    </text>
+  </g>
+
+  <!-- Elemento de destaque: "Brasa" com cauda decorativa elegante -->
+  <g id="texto-brasa">
+    <!-- Texto principal Brasa -->
+    <text x="148" y="194" text-anchor="middle" fill="#FFFFFF" font-family="'Brush Script MT', 'Great Vibes', 'Caveat', 'Playball', 'Lucida Handwriting', 'Dancing Script', cursive, sans-serif" font-size="78" font-weight="900" font-style="italic" transform="rotate(-6 148 194)">
+      Brasa
+    </text>
+    <!-- Cauda arqueada sob a palavra Brasa -->
+    <path d="M 88,198 Q 165,208 238,180 Q 185,202 88,206 Z" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+
+  <!-- Banner / Faixa inferior Bege / Dourada curvada -->
+  <g id="ribbon-inferior" filter="url(#ribbon-shadow)">
+    <!-- Ponta esquerda dobrada da fita -->
+    <path d="M 36,252 L 64,236 L 62,260 L 46,268 Z" fill="#C59B63"/>
+    
+    <!-- Ponta direita dobrada da fita -->
+    <path d="M 264,252 L 236,236 L 238,260 L 254,268 Z" fill="#C59B63"/>
+
+    <!-- Corpo principal curvo da fita bege/areia -->
+    <path d="M 44,250 C 75,232 150,224 256,250 C 236,276 150,284 44,250 Z" fill="#DFC091" stroke="#F1DEC0" stroke-width="1.5"/>
+
+    <!-- Dobra suave de brilho da fita -->
+    <path d="M 50,249 C 95,232 165,228 250,250" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.4"/>
+
+    <!-- Texto na fita: "Carnes e Pizzas" em script marrom/avermelhado escuro -->
+    <text x="150" y="261" text-anchor="middle" fill="#2B1810" font-family="'Brush Script MT', 'Great Vibes', 'Caveat', 'Playball', 'Lucida Handwriting', 'Dancing Script', cursive, sans-serif" font-size="26" font-weight="bold" font-style="italic" transform="rotate(2 150 261)">
+      Carnes e Pizzas
+    </text>
+  </g>
+</svg>
