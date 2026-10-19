@@ -8,7 +8,7 @@ interface CtaBannerProps {
 
 export function CtaBanner({ onOpenOrderModal }: CtaBannerProps) {
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-14 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Dynamic gradient background derivado do vermelho oficial e areia do logo */}
       <div className="absolute inset-0 bg-gradient-to-r from-brasa-700 via-brasa-500 to-brasa-600" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(223,192,145,0.35)_0%,_transparent_65%)]" />
@@ -19,7 +19,7 @@ export function CtaBanner({ onOpenOrderModal }: CtaBannerProps) {
 
       <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
         {/* Selo circular retrô no banner com anel duplo */}
-        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1.5 retro-seal flex items-center justify-center mb-6 shadow-2xl transition-transform hover:scale-105">
+        <div className="w-18 h-18 sm:w-28 sm:h-28 rounded-full p-1 sm:p-1.5 retro-seal flex items-center justify-center mb-5 sm:mb-6 shadow-2xl transition-transform hover:scale-105">
           <img
             src={officialLogoImg}
             alt="Logo oficial Tudo na Brasa"
@@ -28,13 +28,13 @@ export function CtaBanner({ onOpenOrderModal }: CtaBannerProps) {
         </div>
 
         {/* Faixa bege curvada estilo "Carnes e Pizzas" */}
-        <div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full ribbon-banner text-xs font-bold mb-4 shadow-xl border border-bege-100/50">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 sm:px-5 rounded-full ribbon-banner text-[11px] sm:text-xs font-bold mb-3 sm:mb-4 shadow-xl border border-bege-100/50">
           <span className="font-sans text-bege-950 font-bold tracking-wide uppercase">
             Desde 2003 • Pedido Online Direto
           </span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4 drop-shadow-md">
+        <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-3 sm:mb-4 drop-shadow-md">
           Pronto para sentir o verdadeiro sabor da{' '}
           <span className="font-script font-normal text-bege-200 inline-block drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
             Brasa Viva?

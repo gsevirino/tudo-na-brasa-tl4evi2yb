@@ -24,17 +24,20 @@ export function TestimonialsSection() {
   }, [isPaused, nextSlide])
 
   return (
-    <section id="depoimentos" className="py-20 px-4 sm:px-6 lg:px-8 bg-carvao-900 relative">
+    <section
+      id="depoimentos"
+      className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 bg-carvao-900 relative"
+    >
       <div className="max-w-5xl mx-auto">
         {/* Section Header com faixa de destaque */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full ribbon-banner text-xs font-bold mb-3 shadow-md border border-bege-100/50">
-            <Sparkles className="w-3.5 h-3.5 text-brasa-600" />
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 rounded-full ribbon-banner text-[11px] sm:text-xs font-bold mb-3 shadow-md border border-bege-100/50">
+            <Sparkles className="w-3.5 h-3.5 text-brasa-600 shrink-0" />
             <span className="text-bege-950 font-sans tracking-wide uppercase">
               Opinião de Quem Já Provou
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-3">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-2 sm:mb-3">
             Clientes Apaixonados pelo{' '}
             <span className="font-script font-normal text-brasa-400 inline-block drop-shadow-[0_2px_10px_rgba(232,64,42,0.4)]">
               Tudo na Brasa
@@ -65,16 +68,19 @@ export function TestimonialsSection() {
               <Quote className="w-20 h-20" />
             </div>
 
-            <CardContent className="p-8 sm:p-12 relative z-10 min-h-[300px] flex flex-col justify-between">
+            <CardContent className="p-5 sm:p-12 relative z-10 min-h-[260px] sm:min-h-[300px] flex flex-col justify-between">
               {/* Active Slide */}
-              <div className="space-y-6 animate-in fade-in duration-500" key={currentIndex}>
+              <div
+                className="space-y-4 sm:space-y-6 animate-in fade-in duration-500"
+                key={currentIndex}
+              >
                 {/* Stars com mini selo de nota */}
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <div className="flex items-center gap-1">
                     {Array.from({ length: 5 }).map((_, idx) => (
                       <Star
                         key={idx}
-                        className={`w-5 h-5 ${
+                        className={`w-4 h-4 sm:w-5 sm:h-5 ${
                           idx < TESTIMONIALS[currentIndex].stars
                             ? 'text-amber-400 fill-amber-400'
                             : 'text-gray-600'
@@ -82,31 +88,31 @@ export function TestimonialsSection() {
                       />
                     ))}
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-full bg-bege-300/20 text-bege-200 border border-bege-300/40 text-xs font-bold tracking-wider uppercase">
+                  <span className="px-2 py-0.5 sm:px-2.5 rounded-full bg-bege-300/20 text-bege-200 border border-bege-300/40 text-[10px] sm:text-xs font-bold tracking-wider uppercase">
                     Avaliação 5.0 ★
                   </span>
                 </div>
 
                 {/* Comment */}
-                <blockquote className="text-lg sm:text-xl text-bege-50 font-medium leading-relaxed italic">
+                <blockquote className="text-base sm:text-xl text-bege-50 font-medium leading-relaxed italic">
                   "{TESTIMONIALS[currentIndex].comment}"
                 </blockquote>
 
                 {/* Author Info com anel duplo no avatar */}
-                <div className="flex items-center gap-4 pt-4 border-t border-bege-300/20">
-                  <div className="relative">
+                <div className="flex items-center gap-3 sm:gap-4 pt-3.5 sm:pt-4 border-t border-bege-300/20">
+                  <div className="relative shrink-0">
                     <img
                       src={TESTIMONIALS[currentIndex].avatarUrl}
                       alt={TESTIMONIALS[currentIndex].name}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-white ring-2 ring-brasa-500 shadow-md"
+                      className="w-11 h-11 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-white ring-2 ring-brasa-500 shadow-md"
                       loading="lazy"
                     />
                   </div>
-                  <div>
-                    <h3 className="text-base font-bold text-white">
+                  <div className="min-w-0">
+                    <h3 className="text-sm sm:text-base font-bold text-white truncate">
                       {TESTIMONIALS[currentIndex].name}
                     </h3>
-                    <p className="text-xs text-bege-200/80">
+                    <p className="text-[11px] sm:text-xs text-bege-200/80 truncate">
                       {TESTIMONIALS[currentIndex].neighborhood} • Belo Horizonte
                     </p>
                   </div>
@@ -114,7 +120,7 @@ export function TestimonialsSection() {
               </div>
 
               {/* Navigation Controls */}
-              <div className="flex items-center justify-between pt-8 mt-6 border-t border-bege-300/20">
+              <div className="flex items-center justify-between pt-5 sm:pt-8 mt-4 sm:mt-6 border-t border-bege-300/20">
                 {/* Dots */}
                 <div className="flex items-center gap-2">
                   {TESTIMONIALS.map((_, idx) => (

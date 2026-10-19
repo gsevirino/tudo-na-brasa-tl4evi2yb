@@ -11,22 +11,22 @@ interface MenuSectionProps {
 
 export function MenuSection({ onSelectItem, onOpenOrderModal }: MenuSectionProps) {
   return (
-    <section id="cardapio" className="py-20 px-4 sm:px-6 lg:px-8 bg-carvao-900 relative">
+    <section id="cardapio" className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 bg-carvao-900 relative">
       {/* Luz ambiente de brasa no fundo */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-brasa-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header com faixa/ribbon de estilo oficial */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           {/* Faixa bege curvada estilo "Carnes e Pizzas" */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full ribbon-banner text-xs font-bold mb-4 shadow-md border border-bege-100/50">
-            <Flame className="w-3.5 h-3.5 text-brasa-600 fill-brasa-600 animate-flame" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 rounded-full ribbon-banner text-[11px] sm:text-xs font-bold mb-3 sm:mb-4 shadow-md border border-bege-100/50">
+            <Flame className="w-3.5 h-3.5 text-brasa-600 fill-brasa-600 animate-flame shrink-0" />
             <span className="font-sans tracking-wide uppercase text-bege-950">
               Cardápio Oficial • Belo Horizonte
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight mb-3">
+          <h2 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight mb-2 sm:mb-3">
             Nossos{' '}
             <span className="font-script font-normal text-brasa-400 inline-block drop-shadow-[0_2px_10px_rgba(232,64,42,0.4)]">
               Destaques
@@ -140,15 +140,15 @@ export function MenuSection({ onSelectItem, onOpenOrderModal }: MenuSectionProps
         </div>
 
         {/* Bottom Banner com borda anel duplo e faixa bege */}
-        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-carvao-800/90 border-2 border-bege-300/30 text-center flex flex-col sm:flex-row items-center justify-between gap-6 backdrop-blur-md shadow-2xl double-ring-card">
+        <div className="mt-10 sm:mt-14 p-5 sm:p-8 rounded-3xl bg-carvao-800/90 border-2 border-bege-300/30 text-center flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 backdrop-blur-md shadow-2xl double-ring-card">
           <div className="text-center sm:text-left">
-            <div className="inline-flex items-center gap-1.5 font-script text-bege-300 text-lg sm:text-xl mb-1">
+            <div className="inline-flex items-center gap-1.5 font-script text-bege-300 text-base sm:text-xl mb-1">
               <span>Cardápio Completo Tudo na Brasa</span>
             </div>
-            <h4 className="text-lg sm:text-xl font-bold text-white mb-1">
+            <h4 className="text-base sm:text-xl font-bold text-white mb-1">
               Deseja ver mais porções, bebidas, caldos e sobremesas?
             </h4>
-            <p className="text-sm text-gray-300">
+            <p className="text-xs sm:text-sm text-gray-300">
               Nosso cardápio oficial conta com pudim de leite, brownie, massas gratinadas, chopp
               gelado e muito mais.
             </p>
@@ -156,10 +156,10 @@ export function MenuSection({ onSelectItem, onOpenOrderModal }: MenuSectionProps
           <Button
             size="lg"
             onClick={onOpenOrderModal}
-            className="ribbon-banner hover:brightness-105 text-bege-950 font-bold px-7 py-4 rounded-xl transition-all transform hover:scale-105 shrink-0 gap-2 shadow-xl border border-white/50 text-sm sm:text-base"
+            className="w-full sm:w-auto ribbon-banner hover:brightness-105 text-bege-950 font-bold px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl transition-all transform hover:scale-105 shrink-0 gap-2 shadow-xl border border-white/50 text-sm sm:text-base flex items-center justify-center"
           >
             <span>Ver Cardápio Completo</span>
-            <ArrowRight className="w-4 h-4 text-brasa-600" />
+            <ArrowRight className="w-4 h-4 text-brasa-600 shrink-0" />
           </Button>
         </div>
       </div>

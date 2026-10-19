@@ -31,7 +31,7 @@ export function HeroSection({ onOpenOrderModal }: HeroSectionProps) {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-carvao-950"
+      className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-28 pb-14 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-carvao-950"
     >
       {/* Background Image with warm red/charcoal atmospheric overlay derived from official seal */}
       <div className="absolute inset-0 z-0">
@@ -49,9 +49,9 @@ export function HeroSection({ onOpenOrderModal }: HeroSectionProps) {
 
       <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
         {/* Badge do topo em formato de faixa bege curvada com texto marrom escuro */}
-        <div className="relative inline-flex items-center gap-2 px-5 py-2 rounded-full ribbon-banner font-script text-xs sm:text-sm font-normal mb-8 shadow-2xl transition-transform hover:scale-105 animate-fade-in-down border border-bege-100/50">
-          <Flame className="w-4 h-4 text-brasa-600 fill-brasa-600 animate-flame shrink-0" />
-          <span className="font-semibold text-bege-950 font-sans tracking-wide">
+        <div className="relative inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-full ribbon-banner font-script text-[11px] sm:text-sm font-normal mb-6 sm:mb-8 shadow-2xl transition-transform hover:scale-105 animate-fade-in-down border border-bege-100/50 max-w-full">
+          <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brasa-600 fill-brasa-600 animate-flame shrink-0" />
+          <span className="font-semibold text-bege-950 font-sans tracking-wide truncate sm:whitespace-normal">
             Desde 2003 • O Autêntico Sabor do Fogo de Chão em BH
           </span>
           <span className="hidden sm:inline font-script text-brasa-700 text-sm ml-1">
@@ -60,8 +60,8 @@ export function HeroSection({ onOpenOrderModal }: HeroSectionProps) {
         </div>
 
         {/* H1 Title with mixed Script + Bold Display (igual à marca do selo oficial) */}
-        <div className="mb-3">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[1.05] drop-shadow-md">
+        <div className="mb-3 w-full">
+          <h1 className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[1.1] drop-shadow-md">
             Tudo na{' '}
             <span className="font-script font-normal text-brasa-400 inline-block transform -rotate-2 hover:rotate-0 transition-transform duration-300 drop-shadow-[0_4px_20px_rgba(232,64,42,0.6)]">
               Brasa
@@ -69,16 +69,16 @@ export function HeroSection({ onOpenOrderModal }: HeroSectionProps) {
           </h1>
           {/* Faixa decorativa horizontal com curvatura sutil sob o título */}
           <div className="flex items-center justify-center gap-2 mt-2">
-            <span className="h-0.5 w-10 sm:w-20 bg-gradient-to-r from-transparent to-bege-300" />
-            <span className="font-script text-bege-200 text-lg sm:text-2xl tracking-wide">
+            <span className="h-0.5 w-6 sm:w-20 bg-gradient-to-r from-transparent to-bege-300" />
+            <span className="font-script text-bege-200 text-base sm:text-2xl tracking-wide">
               Carnes & Pizzas na Brasa
             </span>
-            <span className="h-0.5 w-10 sm:w-20 bg-gradient-to-l from-transparent to-bege-300" />
+            <span className="h-0.5 w-6 sm:w-20 bg-gradient-to-l from-transparent to-bege-300" />
           </div>
         </div>
 
         {/* Subtitle */}
-        <p className="text-lg sm:text-2xl md:text-3xl font-semibold text-bege-100/90 mb-4 max-w-3xl">
+        <p className="text-base sm:text-2xl md:text-3xl font-semibold text-bege-100/90 mb-3 sm:mb-4 max-w-3xl leading-snug">
           Churrascaria & Pizzaria Artesanal no Bairro Castelo
         </p>
 
@@ -90,24 +90,24 @@ export function HeroSection({ onOpenOrderModal }: HeroSectionProps) {
         </p>
 
         {/* Dual CTAs no estilo do selo */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-14">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-10 sm:mb-14">
           <Button
             size="lg"
             onClick={onOpenOrderModal}
-            className="w-full sm:w-auto bg-brasa-500 hover:bg-brasa-600 text-white font-bold text-base px-8 py-6 rounded-2xl glow-brasa border-2 border-white/20 transition-all transform hover:scale-105 active:scale-95 shadow-2xl flex items-center justify-center gap-2.5"
+            className="w-full sm:w-auto bg-brasa-500 hover:bg-brasa-600 text-white font-bold text-base px-6 sm:px-8 py-5 sm:py-6 rounded-2xl glow-brasa border-2 border-white/20 transition-all transform hover:scale-105 active:scale-95 shadow-2xl flex items-center justify-center gap-2.5"
           >
-            <Flame className="w-5 h-5 fill-white" />
+            <Flame className="w-5 h-5 fill-white shrink-0" />
             <span>Fazer Pedido Agora</span>
-            <ExternalLink className="w-4 h-4 opacity-90" />
+            <ExternalLink className="w-4 h-4 opacity-90 shrink-0" />
           </Button>
 
           <Button
             size="lg"
             variant="outline"
             onClick={scrollToMenu}
-            className="w-full sm:w-auto bg-carvao-900/80 hover:bg-carvao-800 text-bege-100 border-2 border-bege-300/50 hover:border-bege-300 font-bold text-base px-8 py-6 rounded-2xl backdrop-blur-sm transition-all flex items-center justify-center gap-2.5 shadow-lg"
+            className="w-full sm:w-auto bg-carvao-900/80 hover:bg-carvao-800 text-bege-100 border-2 border-bege-300/50 hover:border-bege-300 font-bold text-base px-6 sm:px-8 py-5 sm:py-6 rounded-2xl backdrop-blur-sm transition-all flex items-center justify-center gap-2.5 shadow-lg"
           >
-            <UtensilsCrossed className="w-5 h-5 text-bege-300" />
+            <UtensilsCrossed className="w-5 h-5 text-bege-300 shrink-0" />
             <span>Ver Cardápio & Preços</span>
           </Button>
         </div>

@@ -25,26 +25,26 @@ export function OrderModal({ isOpen, onClose, item }: OrderModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="sm:max-w-md bg-carvao-950 border-2 border-bege-300/40 text-white shadow-2xl animate-in zoom-in-95 duration-200 rounded-3xl double-ring-card p-6">
-        <DialogHeader className="space-y-3">
-          <div className="mx-auto w-18 h-18 rounded-full p-1 retro-seal flex items-center justify-center shadow-2xl">
+      <DialogContent className="w-[92vw] max-w-md max-h-[90dvh] overflow-y-auto bg-carvao-950 border-2 border-bege-300/40 text-white shadow-2xl animate-in zoom-in-95 duration-200 rounded-3xl double-ring-card p-5 sm:p-6">
+        <DialogHeader className="space-y-2.5 sm:space-y-3">
+          <div className="mx-auto w-14 h-14 sm:w-18 sm:h-18 rounded-full p-1 retro-seal flex items-center justify-center shadow-2xl">
             <img
               src={officialLogoImg}
               alt="Logo Oficial Tudo na Brasa"
-              className="w-16 h-16 object-contain rounded-full"
+              className="w-12 h-12 sm:w-16 sm:h-16 object-contain rounded-full"
             />
           </div>
 
           {/* Faixa bege informativa */}
-          <div className="mx-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full ribbon-banner text-[11px] font-bold text-bege-950 border border-white/50">
+          <div className="mx-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full ribbon-banner text-[10px] sm:text-[11px] font-bold text-bege-950 border border-white/50">
             <span>Sistema Oficial • Belo Horizonte/MG</span>
           </div>
 
-          <DialogTitle className="text-xl sm:text-2xl font-black text-center text-white">
+          <DialogTitle className="text-lg sm:text-2xl font-black text-center text-white leading-snug">
             Redirecionando para o{' '}
             <span className="font-script font-normal text-brasa-400">Cardápio Oficial</span>
           </DialogTitle>
-          <DialogDescription className="text-sm text-bege-100/90 text-center leading-relaxed">
+          <DialogDescription className="text-xs sm:text-sm text-bege-100/90 text-center leading-relaxed">
             {item ? (
               <span>
                 Você selecionou <strong className="text-white font-bold">{item.name}</strong> por{' '}

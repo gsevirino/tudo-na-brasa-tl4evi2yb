@@ -30,12 +30,12 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-carvao-950 border-t-2 border-brasa-500/30 text-gray-300 pt-16 pb-12 relative overflow-hidden">
+    <footer className="bg-carvao-950 border-t-2 border-brasa-500/30 text-gray-300 pt-12 sm:pt-16 pb-24 sm:pb-12 relative overflow-hidden">
       {/* Faixa decorativa no topo inspirada no ribbon bege do logo */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brasa-600 via-bege-300 to-brasa-600" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8 mb-10 sm:mb-12">
           {/* Brand info com o selo oficial em destaque */}
           <div className="space-y-4">
             <FlameLogo size="lg" />

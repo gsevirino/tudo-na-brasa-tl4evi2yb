@@ -7,24 +7,24 @@ export function AboutSection() {
   return (
     <section
       id="sobre"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-carvao-950 relative overflow-hidden border-t-2 border-b-2 border-brasa-500/20"
+      className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 bg-carvao-950 relative overflow-hidden border-t-2 border-brasa-500/20"
     >
+      {' '}
       {/* Background glow sutil do selo */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-brasa-500/10 rounded-full blur-3xl pointer-events-none" />
-
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column: Fachada Real com detalhes retrô e tratamento visual de alta fidelidade */}
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden border-2 border-bege-300/40 shadow-2xl shadow-black/90 group double-ring-card bg-carvao-900">
               {/* Badge indicando foto real da casa */}
-              <div className="absolute top-4 left-4 z-20 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-carvao-950/85 backdrop-blur-md border border-bege-300/50 shadow-lg text-[11px] font-semibold text-bege-200">
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-carvao-950/85 backdrop-blur-md border border-bege-300/50 shadow-lg text-[10px] sm:text-[11px] font-semibold text-bege-200">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Fachada Oficial • Castelo
+                <span>Fachada Oficial • Castelo</span>
               </div>
 
-              {/* Foto real com tratamento refinado: nitidez, proporção equilibrada e leve calor de brasa */}
-              <div className="relative w-full h-[420px] sm:h-[500px] lg:h-[520px] overflow-hidden">
+              {/* Foto real com tratamento refinado: enquadramento perfeito mostrando toldo, fachada e mesas */}
+              <div className="relative w-full h-[280px] xs:h-[320px] sm:h-[440px] lg:h-[500px] overflow-hidden">
                 <img
                   src={facadeImg}
                   alt="Fachada oficial do restaurante Tudo na Brasa com mesas ao ar livre, toldo vermelho e logo tradicional no bairro Castelo em Belo Horizonte"
@@ -33,15 +33,17 @@ export function AboutSection() {
                   decoding="async"
                 />
 
-                {/* Overlays sutis de vinheta e calor de carvão/brasa para harmonizar com a identidade escura do site */}
-                <div className="absolute inset-0 bg-gradient-to-t from-carvao-950 via-carvao-950/30 to-black/15 pointer-events-none" />
+                {/* Overlays sutis de vinheta e calor de carvão/brasa */}
+                <div className="absolute inset-0 bg-gradient-to-t from-carvao-950/80 via-transparent to-black/20 pointer-events-none" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-brasa-950/30 via-transparent to-amber-900/10 mix-blend-soft-light pointer-events-none" />
               </div>
 
-              {/* Floating Stat Card no estilo do selo */}
-              <div className="absolute bottom-5 left-5 right-5 p-4 sm:p-5 rounded-2xl bg-carvao-950/95 backdrop-blur-md border border-bege-300/40 flex items-center justify-between gap-4 shadow-xl z-20">
-                <div className="flex items-center gap-3 min-w-0">
-                  <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full p-1 retro-seal flex items-center justify-center shrink-0">
+              {/* Card de Tradição & Brasa Viva:
+                  No mobile, posicionado de forma limpa como barra inferior integrada (ou logo abaixo com padding compacto),
+                  com selo discreto (~44px no mobile, ~56px em telas maiores), sem encobrir a fachada e sem colidir com o letreiro */}
+              <div className="p-3.5 sm:p-5 bg-carvao-950 border-t border-bege-300/30 flex items-center justify-between gap-3 shadow-xl relative z-10">
+                <div className="flex items-center gap-2.5 sm:gap-3.5 min-w-0">
+                  <div className="w-10 h-10 sm:w-13 sm:h-13 rounded-full p-0.5 sm:p-1 retro-seal flex items-center justify-center shrink-0 bg-carvao-900">
                     <img
                       src={officialLogoImg}
                       alt="Selo oficial Tudo na Brasa"
@@ -49,19 +51,19 @@ export function AboutSection() {
                     />
                   </div>
                   <div className="min-w-0">
-                    <h4 className="text-white font-bold text-sm sm:text-base truncate">
+                    <h4 className="text-white font-bold text-xs sm:text-base leading-tight truncate">
                       Tradição & Brasa Viva
                     </h4>
-                    <p className="text-xs text-bege-200/80 truncate">
-                      Ponto nobre no Castelo, Belo Horizonte
+                    <p className="text-[11px] sm:text-xs text-bege-200/80 leading-tight mt-0.5 truncate">
+                      Ponto nobre no Castelo • BH
                     </p>
                   </div>
                 </div>
-                <div className="text-right shrink-0">
-                  <span className="font-script text-bege-300 font-normal text-xl sm:text-2xl block leading-none">
+                <div className="text-right shrink-0 pl-2 border-l border-white/10 sm:border-transparent">
+                  <span className="font-script text-bege-300 font-normal text-base sm:text-2xl block leading-none">
                     Desde 2003
                   </span>
-                  <span className="text-[10px] text-white/70 uppercase tracking-widest font-semibold mt-1 block">
+                  <span className="text-[9px] sm:text-[10px] text-white/70 uppercase tracking-widest font-semibold mt-0.5 sm:mt-1 block">
                     Autêntico
                   </span>
                 </div>
@@ -73,23 +75,23 @@ export function AboutSection() {
           </div>
 
           {/* Right Column: Institutional Story & Values */}
-          <div className="space-y-6">
+          <div className="space-y-5 sm:space-y-6">
             {/* Faixa bege curvada estilo ribbon do logo */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full ribbon-banner text-xs font-bold shadow-md border border-bege-100/50">
-              <Flame className="w-3.5 h-3.5 text-brasa-600 fill-brasa-600 animate-flame" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 rounded-full ribbon-banner text-[11px] sm:text-xs font-bold shadow-md border border-bege-100/50">
+              <Flame className="w-3.5 h-3.5 text-brasa-600 fill-brasa-600 animate-flame shrink-0" />
               <span className="text-bege-950 font-sans tracking-wide uppercase">
                 Nossa História & Essência Mineira
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-snug sm:leading-tight">
               O autêntico sabor da brasa com a arte da{' '}
               <span className="font-script font-normal text-brasa-400 inline-block drop-shadow-[0_2px_10px_rgba(232,64,42,0.4)]">
                 Hospitalidade Mineira
               </span>
             </h2>
 
-            <div className="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+            <div className="space-y-3.5 sm:space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
               <p>
                 Nascido no coração do bairro Castelo em Belo Horizonte, o{' '}
                 <strong className="text-white font-bold">Tudo na Brasa</strong> foi concebido para
@@ -161,8 +163,8 @@ export function AboutSection() {
             </div>
 
             {/* Local SEO badge */}
-            <div className="pt-2 flex items-center gap-2 text-xs text-bege-300 font-medium">
-              <MapPin className="w-4 h-4 text-brasa-500 shrink-0" />
+            <div className="pt-2 flex items-start sm:items-center gap-2 text-xs text-bege-300 font-medium leading-relaxed">
+              <MapPin className="w-4 h-4 text-brasa-500 shrink-0 mt-0.5 sm:mt-0" />
               <span>Orgulho de servir Belo Horizonte • Bairro Castelo • Pampulha e região</span>
             </div>
           </div>

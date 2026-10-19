@@ -83,18 +83,18 @@ export function ContactSection() {
   return (
     <section
       id="contato"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-carvao-950 relative border-t-2 border-brasa-500/20"
+      className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 bg-carvao-950 relative border-t-2 border-brasa-500/20"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full ribbon-banner text-xs font-bold mb-3 shadow-md border border-bege-100/50">
-            <MapPin className="w-3.5 h-3.5 text-brasa-600" />
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 rounded-full ribbon-banner text-[11px] sm:text-xs font-bold mb-3 shadow-md border border-bege-100/50">
+            <MapPin className="w-3.5 h-3.5 text-brasa-600 shrink-0" />
             <span className="text-bege-950 font-sans tracking-wide uppercase">
               Belo Horizonte • Castelo
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-3">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-2 sm:mb-3">
             Onde Estamos &{' '}
             <span className="font-script font-normal text-brasa-400 inline-block drop-shadow-[0_2px_10px_rgba(232,64,42,0.4)]">
               Contato
@@ -262,7 +262,7 @@ export function ContactSection() {
 
           {/* Right Column (7 cols): Google Maps Embed & Route com anel duplo */}
           <div className="lg:col-span-7 flex flex-col justify-between rounded-3xl bg-carvao-900 border-2 border-bege-300/30 overflow-hidden shadow-2xl p-2.5 sm:p-3.5 double-ring-card">
-            <div className="relative w-full h-[400px] lg:h-[520px] rounded-2xl overflow-hidden bg-carvao-950 border border-white/10">
+            <div className="relative w-full h-[280px] xs:h-[320px] sm:h-[420px] lg:h-[520px] rounded-2xl overflow-hidden bg-carvao-950 border border-white/10">
               <iframe
                 title="Localização do restaurante Tudo na Brasa em Belo Horizonte"
                 src={RESTAURANT_INFO.googleMapsEmbed}
@@ -275,8 +275,8 @@ export function ContactSection() {
                 className="w-full h-full filter invert-[90%] hue-rotate-180 contrast-125 brightness-90 rounded-2xl"
               />
               {/* Mini-selo de endereço flutuante */}
-              <div className="absolute top-3 left-3 bg-carvao-950/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-bege-300/40 text-xs text-bege-100 font-semibold flex items-center gap-2 shadow-xl">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <div className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 bg-carvao-950/95 backdrop-blur-md px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-bege-300/40 text-[10px] sm:text-xs text-bege-100 font-semibold flex items-center gap-1.5 sm:gap-2 shadow-xl">
+                <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 shrink-0" />
                 <span>Castelo • Belo Horizonte/MG</span>
               </div>
             </div>
@@ -288,10 +288,10 @@ export function ContactSection() {
               </p>
               <Button
                 asChild
-                className="ribbon-banner hover:brightness-105 text-bege-950 font-bold text-xs px-4 py-2.5 rounded-xl shrink-0 gap-1.5 shadow-md border border-white/40"
+                className="w-full sm:w-auto ribbon-banner hover:brightness-105 text-bege-950 font-bold text-xs px-4 py-2.5 rounded-xl shrink-0 gap-1.5 shadow-md border border-white/40 flex items-center justify-center"
               >
                 <a href={RESTAURANT_INFO.googleMapsRoute} target="_blank" rel="noopener noreferrer">
-                  <Navigation className="w-3.5 h-3.5 text-brasa-700" />
+                  <Navigation className="w-3.5 h-3.5 text-brasa-700 shrink-0" />
                   <span>Traçar Rota no Waze / Maps</span>
                 </a>
               </Button>
