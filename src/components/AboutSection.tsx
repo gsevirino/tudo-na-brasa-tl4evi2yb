@@ -1,6 +1,7 @@
 import { Flame, Beef, HeartHandshake, Sparkles, MapPin } from 'lucide-react'
 import { RESTAURANT_INFO } from '@/data/restaurantData'
 import officialLogoImg from '@/assets/image-524a6.png'
+import facadeImg from '@/assets/image-8b1d0.png'
 
 export function AboutSection() {
   return (
@@ -13,40 +14,54 @@ export function AboutSection() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Image Mosaic com detalhes retrô */}
+          {/* Left Column: Fachada Real com detalhes retrô e tratamento visual de alta fidelidade */}
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden border-2 border-bege-300/30 shadow-2xl shadow-black/80 group double-ring-card">
-              <img
-                src="https://img.usecurling.com/p/800/700?q=steakhouse+restaurant+interior&color=orange"
-                alt="Ambiente acolhedor e familiar do Tudo na Brasa em Belo Horizonte"
-                className="w-full h-[400px] sm:h-[480px] object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-carvao-950 via-carvao-950/20 to-transparent" />
+            <div className="relative rounded-3xl overflow-hidden border-2 border-bege-300/40 shadow-2xl shadow-black/90 group double-ring-card bg-carvao-900">
+              {/* Badge indicando foto real da casa */}
+              <div className="absolute top-4 left-4 z-20 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-carvao-950/85 backdrop-blur-md border border-bege-300/50 shadow-lg text-[11px] font-semibold text-bege-200">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                Fachada Oficial • Castelo
+              </div>
+
+              {/* Foto real com tratamento refinado: nitidez, proporção equilibrada e leve calor de brasa */}
+              <div className="relative w-full h-[420px] sm:h-[500px] lg:h-[520px] overflow-hidden">
+                <img
+                  src={facadeImg}
+                  alt="Fachada oficial do restaurante Tudo na Brasa com mesas ao ar livre, toldo vermelho e logo tradicional no bairro Castelo em Belo Horizonte"
+                  className="w-full h-full object-cover object-[center_35%] transition-transform duration-700 ease-out group-hover:scale-105 filter brightness-[1.03] contrast-[1.04] saturate-[1.06]"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                {/* Overlays sutis de vinheta e calor de carvão/brasa para harmonizar com a identidade escura do site */}
+                <div className="absolute inset-0 bg-gradient-to-t from-carvao-950 via-carvao-950/30 to-black/15 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-brasa-950/30 via-transparent to-amber-900/10 mix-blend-soft-light pointer-events-none" />
+              </div>
+
               {/* Floating Stat Card no estilo do selo */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 sm:p-5 rounded-2xl bg-carvao-950/95 backdrop-blur-md border border-bege-300/40 flex items-center justify-between gap-4 shadow-xl">
-                <div className="flex items-center gap-3">
-                  <div className="w-14 h-14 rounded-full p-1 retro-seal flex items-center justify-center shrink-0">
+              <div className="absolute bottom-5 left-5 right-5 p-4 sm:p-5 rounded-2xl bg-carvao-950/95 backdrop-blur-md border border-bege-300/40 flex items-center justify-between gap-4 shadow-xl z-20">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full p-1 retro-seal flex items-center justify-center shrink-0">
                     <img
                       src={officialLogoImg}
                       alt="Selo oficial Tudo na Brasa"
                       className="w-full h-full object-contain rounded-full"
                     />
                   </div>
-                  <div>
-                    <h4 className="text-white font-bold text-sm sm:text-base">
+                  <div className="min-w-0">
+                    <h4 className="text-white font-bold text-sm sm:text-base truncate">
                       Tradição & Brasa Viva
                     </h4>
-                    <p className="text-xs text-bege-200/80">
+                    <p className="text-xs text-bege-200/80 truncate">
                       Ponto nobre no Castelo, Belo Horizonte
                     </p>
                   </div>
                 </div>
-                <div className="text-right">
-                  <span className="font-script text-bege-300 font-normal text-xl sm:text-2xl block">
+                <div className="text-right shrink-0">
+                  <span className="font-script text-bege-300 font-normal text-xl sm:text-2xl block leading-none">
                     Desde 2003
                   </span>
-                  <span className="text-[10px] text-white/70 uppercase tracking-widest font-semibold">
+                  <span className="text-[10px] text-white/70 uppercase tracking-widest font-semibold mt-1 block">
                     Autêntico
                   </span>
                 </div>
